@@ -1,0 +1,7 @@
+ID,User,DateCreated,Text
+9b088s;asml84;1535501441.0;Jump in bond value
+9b088s;asml84;1535501441.0;"I’ve noticed that one of my bonds (Google) makes seemingly random jumps in value. On most days it’s in line with my other bonds (+- 5$), but occasionally it jumps +80$ on a day, only to drop about the same a few days later. What’s going on?"
+
+e4zcm14;klausshermann;1535501888.0;"Big institutional investors buying/selling large lots of the issue? not sure what else would cause cause that."
+e4zknvx;Felflare;1535508696.0;"The price you are seeing is probably last trade price, as there aren't liquid two-sided markets within bonds across all maturities.This means price will fluctuate based on trades made by the big boys and the price they agreed on.The drops of $80 in price you are seeing are based on two people negotiated price as there are very few buyers and sellers at any given time. If a current bond holder needs to drop the issue to meet regulatory obligations they would want to sell fast, which the buyers would capitalize on. The reverse of this scenario if you wish to buy a large chunk of bonds asap, and there aren't enough sellers to satisfy your needs, you may find one that would part with their inventory of bonds at a steep premium."
+e4ztgbp;Project_Zero_Betas;1535516088.0;"That's your liquidity premium at work."

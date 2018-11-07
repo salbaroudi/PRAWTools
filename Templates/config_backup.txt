@@ -1,0 +1,23 @@
+credFile::/home/user/Documents/Universe/Credentials/reddit.txt
+#Location of header and footer files for HTML/JSON outputs.
+headLoc::templates/header.html
+footLoc::templates/footer.html
+#Default Location to where output files must reside.
+outPath::./outputfiles
+#Time in seconds for delay function, after every submission request.
+sleepTime::5
+#Select output format. Options: "html","csv","json"
+outputType::html
+#Replace More settings: limit on requests and min threshold for a node's children.
+rmLimit::None
+rmThresh::1
+#name to call a request filtering function; cuts down our gathered set.
+cfFilterFun::nothing
+#This is a symbol for delimiting our CSV files. Options are: "comma", "semicolon", "colon", "tab", "none"
+delimSymbol::tab
+#Used for User and Subreddit filtering. Filter Types: "new", "hot", "controversial", "top"
+listingFilter::new
+listingLimit::20
+#To get listings over a particular time frame. Options: "day", "week", "month", "year", "all", "none"
+listingTime::
+#From a given user/subreddit search, gather all submissions and call the submission printout algorithms.

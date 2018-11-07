@@ -1,0 +1,10 @@
+credFile::/home/user/Documents/Workspace/Me/Credentials/reddit.txt
+headLoc::../../Templates/header.html
+footLoc::../../Templates/footer.html
+sleepTime::630
+outputType::html
+rmLimit::None
+rmThresh::1
+delimSymbol::tab
+readOnly::0
+cFFilter::None

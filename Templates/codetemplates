@@ -1,0 +1,59 @@
+from outputwriters import writeoutput
+from outputwriters import htmlcommhead, htmlcommbody, htmlcommfoot, htmlcommdelete
+from outputwriters import htmlsubheader,htmlsubselftext,htmlsubfooter
+from outputwriters import csvcommhead, csvcommbody, csvcommfoot, csvcommdelete
+from outputwriters import csvsubheader,csvsubselftext,csvsubfooter
+
+#Subreddit access after authentication
+  subRedList = [] #Our submissions go here.
+  subRedList.append(cO.subRedID)
+
+  for sR in subRedList: #[***] Error Checking
+    listingGen = getattr(reddSess.subreddit(sR),cO.listingFilter)
+    submissionList = listingGen(limit=cO.listingLimit)
+    #function: extract subreddit properties (if wanted)
+    outFP = open("./outputfiles/subreddit.csv","w")
+    for sub in submissionList: #[***] This is already awkward...
+      delim = cO.delimSymbol
+      row = str(sub.id) + delim + str(sub.author) + delim
+      row += str(sub.title) + delim + str(sub.selftext) + "\n"
+      outFP.write(row)
+      submissionoutput(cO,sub,sub.id)
+      delay(cO.sleepTime)
+    outFP.close()
+
+#User access after authentication.
+  listGen = getattr(reddSess.redditor('DickMasterson'),cO.listingFilter)
+  outFP = open("./outputfiles/" + cO.user + ".csv","w")
+  for comment in listGen(limit=cO.listingLimit):
+    delim = cO.delimSymbol
+    row = str(comment.id) + delim + str(comment.created) + delim
+    row += str(comment.body).replace(cO.delimSymbol,"") + "\n"
+    outFP.write(row)
+  outFP.close()
+
+
+
+  #Signature: Object[Comment] -> Object[Comment]
+  #Purpose: Go up the comment stack until we find a top level comment.
+  #Termination Proof: Comments cannot have infinite parents. It must top out eventually.
+  def findTLC(comm):
+      if (not comm.is_root):
+          return findTLC(comm.parent())
+      else:
+          return comm
+
+  def main():
+      credFilePath = "/home/user/Documents/Universe/Credentials/reddit.txt"
+      rS = startredditsession(credFilePath)
+      #Lets get a user:
+      user = rS.redditor('DickMasterson') #as an example.
+      #get the listingGenerator:
+      listGen = getattr(user.comments, "new") #this gets the .new() function, which is bound.
+      tlcDict = []
+      for comment in listGen(limit=5):
+          topLevelComment = findTLC(comment)
+          if (topLevelComment.id not in tlcDict): #dont duplicate.
+              tlcDict.append(topLevelComment.id)
+          else:
+              pass
