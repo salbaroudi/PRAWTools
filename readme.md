@@ -16,15 +16,24 @@ In order to achieve these two goals, I changed the folder structure, as follows:
 
 PRAW
   ./PRAW_Tools
+  
   |---/ParchCodeBase: All the code base files live here
+  
   |---/Templates
-       |---input.txt
-       |---codetemplates
-       |---config.txt
-       |---various headers/footers for outputwriters
+  
+    |---input.txt
+  
+    |---codetemplates
+  
+    |---config.txt
+  
+    |---various headers/footers for outputwriters
+  
   |---/WorkArea
-      |---/Various Projects
- - newproj.sh
+  
+  |---/Various Projects
+ 
+    -newproj.sh
 
 Because project work, CodeBase, Templates are all nested
 at different levels, it can be difficult to setup a new working folder. At the top
@@ -32,11 +41,16 @@ level of the PRAW_Tools folder, a shell script (newproj.sh) has been written to
 set up the correct folder structure:
 
 /WorkArea
+   
    /<PROJECTNAME>
-      /<OUTPUTFOLDER>
-      -- input.txt
-      -- config.txt
-      -- pstart.py
+   
+   /<OUTPUTFOLDER>
+   
+        -- input.txt
+    
+        -- config.txt
+   
+        -- pstart.py
 
 The shellscript takes the following options on command line, and is run as follows:
 
