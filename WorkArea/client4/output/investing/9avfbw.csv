@@ -1,0 +1,13 @@
+ID,User,DateCreated,Text
+9avfbw;iambadpuns;1535454721.0;Explain options to me?
+9avfbw;iambadpuns;1535454721.0;"I think I'm confused, because it seems to be ridiculous..So, Stock A is at $180. A call option for June, at $45 is an $137 ask. This means for $137, i buy the option to buy A at $45 by June.. But an option consists of 100 contracts.. the intrinsic value at market of this option alone is $13,500 ([180-45]*100)... Clearly, I'm not getting that for $137.. so what is my misunderstanding?If I assume I'm buying a singular contract for $137 (not 100), that puts its worth at $13,700... which is still barely over market value. Which, depending on the stock, might make sense?"
+
+e4ygi4f;ScottishTrader;1535456921.0;"Stock is $180, you buy a call option with a $185 strike price for .50, or $50 (.50 x 100).  This means your break even price is $185.50.If the stock goes up to $185.51 by expiration you will start to profit.  For example, I f the stock is at $187 when the option expires, you will make $1.50, or $150, profit.Make sense?"
+e4yerid;ducksauce;1535454892.0;"Your misunderstanding is that you multiply the price by 100, too, so it would cost $13,700."
+e4z1vu6;c0rd4b4ck;1535492166.0;"If I bought snap put options before earnings SP of $13 and it was like 12.40 after, how do i lose money?"
+e4yg1u9;mr_apple_pie;1535456376.0;"The value of a call option will move dollar for dollar by the amount the underlying stock increases (or decreases), so it gives you exposure to a stock for alot less capital.Edit, this also depends on the strike price of the option relative to the current market price of the underlying stock."
+e4z1x92;crzylgs;1535492207.0;"Can I be in this screenshot please?"
+e4yfacf;Joeyschmo102;1535455479.0;"Saucey"
+e4z9jxa;Quanticks;1535499245.0;"What did you pay for the option. "
+e4yrk7y;doougle;1535476492.0;"> The value of a call option will move dollar for dollar by the amount the underlying stock increases (or decreases)This is wrong.  It will move a percent of the underlying move.  The delta of the option shows how much it'll move per dollar change in stock price."
+e4yv24m;mr_apple_pie;1535483560.0;"Thanks for the correction"
